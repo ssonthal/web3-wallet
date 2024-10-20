@@ -26,12 +26,11 @@ export const SolanaWallet = ({mnemonic} : SolanaWalletProps) => {
                 Add SQL Wallet 
             </button>
             {publicKeys.map((p:any) => {
-                return <div>
+                return<div key={publicKeys.indexOf(p)}>
                     {p.toBase58()}
                     </div>
             })}
         </div>
     );
-
 }
 

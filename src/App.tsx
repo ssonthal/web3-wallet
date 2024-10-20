@@ -3,6 +3,7 @@ import { generateMnemonic} from "bip39";
 import { useState } from "react";
 import { Buffer } from "buffer";
 import { SolanaWallet } from './SolanaWallet';
+import { EthereumWallet } from './EthereumWallet';
 window.Buffer = window.Buffer || Buffer;
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           Create Seed Phrase
       </button>
       {mnemonic && <SolanaWallet mnemonic = {mnemonic}></SolanaWallet>}
+      {mnemonic && <EthereumWallet mnemonic = {mnemonic}></EthereumWallet>}
     </>
   )
 }
